@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mediaqueries.css">
     <link rel="icon" href="favicon.ico?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,71 +19,346 @@
 </head>
 
 <body>
-    <div>
-    <nav class="navbar fixed-top navbar-expand-lg bg-light">
-        <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#profile">Profile</a>
-            <a class="nav-link" href="#skills">Skills</a>
-            <a class="nav-link" href="#contact-me">Contact Me</a>
-            </div>
-        </div>
+    <nav id="desktop-nav">
+        <div class="logo">Xiaofei Sun</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
-    </div>
-    <div class="top">
-    <h1>Xiaofei Sun</h1>
-    <b>
-        <p id="data-analyst">Data Analyst</p>
-    </b>
-    </div>
-    <div class="profile" id="profile">
-    <img width="300px" class="profile-picture" src="images/IMG_2104-modified.png" alt="">
-    <div class="container">
+
+    <nav id="hamburger-nav">
+        <div class="logo">Xiaofei Sun</div>
+        <div class="hamburger-menu">    
+            <div class="hamburger-icon" onclick="toggleMenu()">    <!-- non-builtin html function here: open&close the hamburger menu when we click it -->
+                <span></span>
+                <span></span>
+                <span></span>      <!-- these will be the lines of the hamburger menu -->
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section_pic-container">
+            <img src="images/myphoto.jpg" alt="Xiaofei Sun prodile picture">
+        </div>
+        <div class="section_text">
+            <p class="section_text_p1">Hello, I'm</p>
+            <h1 class="title">Xiaofei Sun</h1>
+            <p class="section_text_p2">Data Analyst</p>
+
+            <div class="btn-container">         <!-- open a new window or tab -->
+                <button class="btn btn-color-1" onclick="window.open('resume_2406.pdf')">
+                    Download CV
+                </button>
+            </div>
+            <div class="btn-container">         <!-- navigates the user to a different webpage -->
+                <button class="btn btn-color-2" onclick="location.href='#contact'">
+                    Contact Info
+                </button>
+            </div>
+            
+            <div id="socials-container">
+                <img
+                src="images/linkedin.png"
+                alt="My Linkedin profile"
+                class="icon"
+                onclick="location.href='https://www.linkedin.com/in/xiaofeisun287/'">
+                <img
+                src="images/github.png"
+                alt="My Github profile"
+                class="icon"
+                onclick="location.href='https://github.com/asa287'">
+            </div>
+        </div>
+    </section>
+
+    <!-- <div class="profile" id="profile">
+        <img width="300px" class="profile-picture" src="images/IMG_2104-modified.png" alt="">
+    </div> -->
+    <!--<div class="container">
         <div class="intro-text">
             <h2>ABOUT ME</h2>
-            <p id="intro-text">Hi, My name is Xiaofei and I am a second year student at the University of British Columbia studying Economics and Data Science.
+            <p id="intro-text">Hi, My name is Xiaofei and I am a third year student at the University of British Columbia studying Economics and Data Science.
                 I love to learn from the stories that data tells us and extract actionable insights for smarter planning and decision making.
                 I also like to focus on macroeconomics, especially financial markets and healthcare.
-                <!-- <br> Right now I would introduce myself as a data analyst or a Machine Learning enthusiast, 
-                but I'm expanding my skills in both Data Science and Software Engineering, hoping to be a MLE in the future! -->
             </p>
         </div>
         <div class="my-image"><img src="images/myphoto.jpg" alt=" " width="300"></div>
-    </div>
-    <div><img width="200px" class="illustration1" src="images/illustration1.png" alt=""></div>
-    <hr>
-    <div class="skills" id="skills">
-    <h2>My Skills</h2>
-    <div class="skill-row">
+    </div> -->
+    
+    <section id="about">
+        <p class="section_text_p1">Get to Know More</p>
+        <h1 class="title">About Me</h1>
+
+        <div class="section-container">
+            
+            <div class="section_pic-container">
+                <img
+                    src="images/about-pic.jpg"
+                    alt="Xiaofei's picture"
+                    class="about-pic">
+            </div>
+            <div class="about-container">
+                <div class="description-containers">
+
+                    <div class="details-container">
+                        <img
+                            src="images/experience1.png"
+                            alt="Experience icon"
+                            class="icon1">
+                        <h3 class="head3">Experience</h3>
+                        <p>1+ year <br> Data Analysis & Machine Learning Application</p>
+                    </div>
+
+                    <div class="details-container">
+                        <img
+                        src="images/education.png"
+                        alt="Education icon"
+                        class="icon1">
+                        <h3 class="head3">Education</h3>
+                        <p>Studying Economics and Data Science <br>at the University of British Columbia</p>
+                    </div>
+                </div>
+
+                <div class="text-container">
+                    <p>
+                        Hi, I am a third-year student at UBC.
+                I love to learn from the stories that data tells us and extract actionable insights for smarter planning and decision making.
+                I also like to apply machine learning on the fields of healthcare and finance to help solve their problems.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img
+            src="images/arrow.png"
+            alt="Arrow icon"
+            class="icon arrow"
+            onclick="location.href='./#experience'"
+            height="30"
+            width="30">
+    </section>
+
+    <section id="experience">
+        <p class="section_text_p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="description-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Data Analysis & <br> Machine Learning</h2>
+                    <hr>
+                    <div class="article-container">
+                        <article>
+                            <img
+                                src="images/checkmark.png"
+                                alt="checkmark icon"
+                                class="icon">
+                            <div>
+                                <h3>R</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img
+                                src="images/checkmark.png"
+                                alt="checkmark icon"
+                                class="icon">
+                            <div>
+                                <h3>Python</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img
+                                src="images/checkmark.png"
+                                alt="checkmark icon"
+                                class="icon">
+                            <div>
+                                <h3>SQL</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Fronted <br>Development</h2>
+                    <hr>
+                    <div class="article-container">
+                        <article>
+                            <img
+                                src="images/checkmark.png"
+                                alt="checkmark icon"
+                                class="icon">
+                            <div>
+                                <h3>HTML</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img
+                                src="images/checkmark.png"
+                                alt="checkmark icon"
+                                class="icon">
+                            <div>
+                                <h3>CSS</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img
+                                src="images/checkmark.png"
+                                alt="checkmark icon"
+                                class="icon">
+                            <div>
+                                <h3>JavaScript</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img
+            src="images/arrow.png"
+            alt="Arrow icon"
+            class="arrow"
+            onclick="location.href='./#projects'"
+            height="30"
+            width="30">
+    </section>
+
+    <section id="projects">
+        <p class="section_text_p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="description-containers">
+                <div class="details-container color-container">
+                    <div class="article-container article-proj-container">
+                        <img
+                        src="images/project1.jpg"
+                        alt="Project 1"
+                        class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Student Study Performance Prediction</h2>
+                    <div class="btn-container">
+                        <button
+                        class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/lesleymai/ds_group'">
+                        Github
+                    </button>
+                    <button
+                        class="btn btn-color-2 project-btn"
+                        onclick="window.location.href='project1.html'">
+                        Final Report
+                    </div>
+                </div>
+
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img
+                            src="./assets/project-2.png"
+                            alt="Project 2"
+                            class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Project Two</h2>
+                    <div class="btn-container">
+                    <button
+                        class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/'">
+                        Github
+                    </button>
+                    <button
+                        class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/'">
+                        Final Report
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img
+            src="images/arrow.png"
+            alt="Arrow icon"
+            class="icon arrow"
+            onclick="location.href='./#contact'"
+            height="30"
+            width="30">
+    </section>
+
+    <section id="contact">
+        <p class="section_text_p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img
+                src="images/email.png"
+                alt="Email icon"
+                class="icon contact-icon email-icon">
+                <p><a href="mailto:asasun287@outlook.com">asasun287@outlook.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img
+                src="images/linkedin.png"
+                alt="Linkedin icon"
+                class="icon contact-icon">
+                <p><a href="https://www.linkedin.com/in/xiaofeisun287">Linkedin</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2024 Xiaofei Sun. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- <div class="skill-row">
         <img class="code-image" src="images/computer.png" alt="">
         <h3>Programming</h3>
-        <p> Proficient with languages such as R, Python, Java, Racket, HTML and CSS.
+        <p> Proficient with languages such as R, Python, SQL, Java, Racket, HTML, CSS and JavaScript.
             <br> Machine Learning enthusiast!
         </p>
-    </div>
-    <div class="skill-row">
+    </div> -->
+    <!-- <div class="skill-row">
         <img class="business-image" src="images/money-transfer.png" alt="">
         <h3>Business</h3>
         <p>Took part in NIBC Global Investment Banking Competition 2024. 
             Also going to begin an internship in finance in the summer of 2024!</p>
-    </div>
-    <div class="skill-row">
+    </div> -->
+    <!-- <div class="skill-row">
         <img class="health-image" src="images/health.png" alt="">
         <h3>Healthcare</h3>
         <p> Care about the medical condition of society and public health! 
             Participating in data work for a project of technical improvements in dental health in the Affiliated Hospital of Qingdao University.
             President of Psychology Club of Qingdao NO.2 Middle School from 2020 to 2021.
         </p>
-    </div>
-    <div><img width="200px" class="illustration2" src="images/team-work.png" alt=""></div>
+    </div> -->
+    <!-- <div><img width="200px" class="illustration2" src="images/team-work.png" alt=""></div>
     <hr>
     <div class="contact-me" id="contact-me">
         <h4>Get In Touch</h4>
@@ -90,11 +366,9 @@
         <p class="contact-message">Feel free to reach out if you are also interested in data science, finance, or healthcare, or
         just want to chat!</p>
         <a class="btn" href="mailto:asasun287@outlook.com">CONTACT ME</a>
-    </div>
+    </div> -->
 
-
-
-    <div class="bot">
+    <!-- <div class="bot">
         <a class="footer-link" href="https://github.com/asa287">
             <img src="images/github-icon.png" alt="" width="40" height="40"></a>
         <a class="footer-link" href="https://www.instagram.com/samsam513_/">
@@ -103,13 +377,8 @@
         <a class="footer-link" href="https://www.linkedin.com/in/xiaofeisun287">
             <img src="images/linkedin-icon.png" alt="" width="40" height="40">
         </a>
-    </div>
+    </div> -->
 
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
-</body>
+    </body>
 
 </html>
