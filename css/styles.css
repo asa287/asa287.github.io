@@ -353,15 +353,19 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  height: 80%;
 }
 
 .details-container1 {
+
+  align-items: center;
   padding: 1.5rem;
   flex: 1;
   background: white;
   border-radius: 2rem;
   border: black 0.1rem solid;
   text-align: center;
+  
 }
 
 .article-container {
@@ -394,6 +398,7 @@ article .icon {
 
 #projects {
   position: relative;
+  
 }
 
 .color-container {
@@ -422,6 +427,7 @@ article .icon {
 .article-proj-container {
   display: flex;
   gap: 1rem;
+  
 }
 
 /* CONTACT */
