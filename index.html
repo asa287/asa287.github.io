@@ -23,10 +23,11 @@
         <div class="logo">Xiaofei Sun</div>
         <div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" data-zh="关于我">About</a></li>
+                <li><a href="#experience" data-zh="经历">Experience</a></li>
+                <li><a href="#projects" data-zh="项目">Projects</a></li>
+                <li><a href="#contact" data-zh="联系方式">Contact</a></li>
+                <li><button onclick="toggleLanguage()" class="btn btn-color-2" style="padding: 0.5rem; font-size: 0.9rem;">中/EN</button></li>
             </ul>
         </div>
     </nav>
@@ -40,10 +41,11 @@
                 <span></span>      <!-- these will be the lines of the hamburger menu -->
             </div>
             <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="#about" onclick="toggleMenu()" data-zh="关于我">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()" data-zh="经历">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()" data-zh="项目">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()" data-zh="联系方式">Contact</a></li>
+                <li><button onclick="toggleLanguage()" class="btn btn-color-2" style="padding: 0.5rem; margin-top: 1rem; font-size: 0.9rem;">中/EN</button></li>
             </div>
         </div>
     </nav>
@@ -53,17 +55,17 @@
             <img src="images/myphoto.png" alt="Xiaofei Sun prodile picture">
         </div>
         <div class="section_text">
-            <p class="section_text_p1">Hello, I'm</p>
+            <p class="section_text_p1" data-zh="你好，我是">Hello, I'm</p>
             <h1 class="title">Xiaofei Sun</h1>
-            <p class="section_text_p2">Data Analyst</p>
+            <p class="section_text_p2" data-zh="产品经理 / 数据分析师">Product Manager / Data Analyst</p>
 
             <div class="btn-container">         <!-- open a new window or tab -->
-                <button class="btn btn-color-1" onclick="window.open('resume.pdf')">
+                <button class="btn btn-color-1" onclick="window.open('resume.pdf')" data-zh="下载简历">
                     Download CV
                 </button>
             </div>
             <div class="btn-container">         <!-- navigates the user to a different webpage -->
-                <button class="btn btn-color-2" onclick="location.href='#contact'">
+                <button class="btn btn-color-2" onclick="location.href='#contact'" data-zh="联系方式">
                     Contact Info
                 </button>
             </div>
@@ -98,8 +100,8 @@
     </div> -->
     
     <section id="about">
-        <p class="section_text_p1">Get to Know More</p>
-        <h1 class="title">About Me</h1>
+        <p class="section_text_p1" data-zh="了解更多">Get to Know More</p>
+        <h1 class="title" data-zh="关于我">About Me</h1>
 
         <div class="section-container">
             
@@ -117,8 +119,8 @@
                             src="images/experience1.png"
                             alt="Experience icon"
                             class="icon1">
-                        <h3 class="head3">Experience</h3>
-                        <p>2+ year <br> Data Analysis & Machine Learning Application</p>
+                        <h3 class="head3" data-zh="经历">Experience</h3>
+                        <p data-zh="两年的数据分析与<br>机器学习应用经验">2+ year <br> Data Analysis & Machine Learning Application</p>
                     </div>
 
                     <div class="details-container">
@@ -126,13 +128,13 @@
                         src="images/education.png"
                         alt="Education icon"
                         class="icon1">
-                        <h3 class="head3">Education</h3>
-                        <p>Studying Economics and Data Science <br>at the University of British Columbia</p>
+                        <h3 class="head3" data-zh="教育背景">Education</h3>
+                        <p data-zh="在英属哥伦比亚大学<br>主修经济学与数据科学">Studying Economics and Data Science <br>at the University of British Columbia</p>
                     </div>
                 </div>
 
                 <div class="text-container">
-                    <p>
+                    <p data-zh="你好，我是UBC的大三学生。<br>我喜欢从数据讲述的故事中学习，提取可操作的见解，以实现更智能的规划和决策。<br>我也热衷于在医疗和金融领域应用机器学习解决问题。">
                         Hi, I am a third-year student at UBC.
                 I love to learn from the stories that data tells us and extract actionable insights for smarter planning and decision making.
                 I also like to apply machine learning on the fields of healthcare and finance to help solve their problems.
@@ -150,12 +152,12 @@
     </section>
 
     <section id="experience">
-        <p class="section_text_p1">Explore My</p>
-        <h1 class="title">Experience</h1>
+        <p class="section_text_p1" data-zh="探索我的">Explore My</p>
+        <h1 class="title" data-zh="经历">Experience</h1>
         <div class="experience-details-container">
             <div class="description-containers">
                 <div class="details-container">
-                    <h2 class="experience-sub-title">Data Analysis & <br> Machine Learning</h2>
+                    <h2 class="experience-sub-title" data-zh="数据分析 与<br> 机器学习">Data Analysis & <br> Machine Learning</h2>
                     <hr>
                     <div class="article-container">
                         <article>
@@ -164,19 +166,8 @@
                                 alt="checkmark icon"
                                 class="icon">
                             <div>
-                                <h3>R</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-
-                        <article>
-                            <img
-                                src="images/checkmark.png"
-                                alt="checkmark icon"
-                                class="icon">
-                            <div>
                                 <h3>Python</h3>
-                                <p>Experienced</p>
+                                <p data-zh="熟练">Experienced</p>
                             </div>
                         </article>
 
@@ -187,14 +178,25 @@
                                 class="icon">
                             <div>
                                 <h3>SQL</h3>
-                                <p>Intermediate</p>
+                                <p data-zh="良好">Intermediate</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img
+                                src="images/checkmark.png"
+                                alt="checkmark icon"
+                                class="icon">
+                            <div>
+                                <h3>R</h3>
+                                <p data-zh="熟练">Experienced</p>
                             </div>
                         </article>
                     </div>
                 </div>
                 
                 <div class="details-container">
-                    <h2 class="experience-sub-title">Fronted <br>Development</h2>
+                    <h2 class="experience-sub-title" data-zh="前端<br>开发">Frontend <br>Development</h2>
                     <hr>
                     <div class="article-container">
                         <article>
@@ -204,7 +206,7 @@
                                 class="icon">
                             <div>
                                 <h3>HTML</h3>
-                                <p>Intermediate</p>
+                                <p data-zh="良好">Intermediate</p>
                             </div>
                         </article>
 
@@ -215,7 +217,7 @@
                                 class="icon">
                             <div>
                                 <h3>CSS</h3>
-                                <p>Intermediate</p>
+                                <p data-zh="良好">Intermediate</p>
                             </div>
                         </article>
 
@@ -226,7 +228,7 @@
                                 class="icon">
                             <div>
                                 <h3>JavaScript</h3>
-                                <p>Basic</p>
+                                <p data-zh="基础">Basic</p>
                             </div>
                         </article>
                     </div>
@@ -243,8 +245,8 @@
     </section>
 
     <section id="projects">
-        <p class="section_text_p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
+        <p class="section_text_p1" data-zh="浏览我最近的">Browse My Recent</p>
+        <h1 class="title" data-zh="项目">Projects</h1>
         <div class="experience-details-container">
             <div class="description-containers">
                 <div class="details-container color-container">
@@ -352,8 +354,8 @@
 
 
     <section id="contact">
-        <p class="section_text_p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
+        <p class="section_text_p1" data-zh="取得联系">Get in Touch</p>
+        <h1 class="title" data-zh="联系我">Contact Me</h1>
         <div class="contact-info-upper-container">
             <div class="contact-info-container">
                 <img
