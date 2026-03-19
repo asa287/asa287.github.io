@@ -380,8 +380,14 @@ section {
 article {
   display: flex;
   width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+html:lang(zh) .text-container p {
+  text-align: center;
+  line-height: 1.8;
 }
 
 article .icon {
