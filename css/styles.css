@@ -5,7 +5,7 @@
 * {  /*target the whole page using star*/
 	margin: 0;
 	padding: 0;
-	cursor: pointer; /* Change default mouse to pointer finger */
+	cursor: url('../images/cursor.png'), auto !important; /* Change default mouse to custom icon */
 }
 
 
