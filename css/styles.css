@@ -5,6 +5,7 @@
 * {  /*target the whole page using star*/
 	margin: 0;
 	padding: 0;
+	cursor: pointer; /* Change default mouse to pointer finger */
 }
 
 
