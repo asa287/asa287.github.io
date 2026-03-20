@@ -8,31 +8,26 @@
 }          /* when the screen size is lower than 1200 pixels, the desktop navigation is gonna display, 
     and the hamburger menu will show up instead*/
 
-/* Responsive layout for smaller screens */
-@media screen and (max-width: 1000px) {
-    .section-container,
-    .description-containers,
-    .article-container {
+@media screen and (max-width: 800px) {
+    .section-container, .description-containers {
         flex-direction: column;
         align-items: center;
-        text-align: center;
-        gap: 2rem;
+        gap: 1.5rem;
     }
-    
+    .about-pic {
+        width: 250px;
+        height: auto;
+    }
     .section_pic-container {
-        min-width: 0;
-        width: 70%;
+        width: 100%;
         height: auto;
         justify-content: center;
     }
-    
-    .about-pic {
-        width: 100%;
-        height: auto;
+    .text-container {
+        text-align: center;
     }
-    
-    section {
-        margin: 0 5%;
+    #about, #experience, #projects, #contact {
         height: auto;
+        padding-bottom: 2rem;
     }
 }
