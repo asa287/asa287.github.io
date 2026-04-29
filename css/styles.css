@@ -86,8 +86,11 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 20vh;
-  /*sets the height of the navigation bar to 17% of the viewport's height*/
+  height: 17vh;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
 }
 
 .nav-links {
