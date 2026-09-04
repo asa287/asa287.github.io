@@ -11,6 +11,11 @@
 }
 
 
+html,
+body {
+  background-color: #ffffff;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -90,7 +95,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .nav-links {
@@ -132,7 +137,7 @@ nav {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: #ffffff;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
